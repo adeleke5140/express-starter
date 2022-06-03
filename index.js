@@ -7,6 +7,10 @@ app.get("/", (req, res) => {
   res.send("Server is working quite okay")
 })
 
+const userRouter = require("./routes/users")
+
+app.use("/users", userRouter)
+
 app.listen(PORT, () => {
   console.log(`app is listening on port ${PORT}`)
 })
